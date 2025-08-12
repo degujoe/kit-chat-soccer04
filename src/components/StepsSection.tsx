@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import openWhatsapp from "@/assets/step-open-whatsapp.png";
@@ -28,10 +28,9 @@ const steps: Step[] = [
   { id: 6, title: "Photo & tracking", description: "You get a packing photo, the transaction hash stored with your order, and tracking (~14 days).", image: photoTracking },
 ];
 
-const StepTile = ({ step, whatsappLink }: { step: Step; whatsappLink: string }) => {
-  const [open, setOpen] = useState(false);
+const StepTile = ({ step }: { step: Step }) => {
   return (
-    <Card className="hover-raise cursor-pointer h-full" onClick={() => setOpen((o) => !o)}>
+    <Card className="h-full">
       <CardContent className="p-4">
         <div className="flex items-center gap-4">
           <img
@@ -42,11 +41,9 @@ const StepTile = ({ step, whatsappLink }: { step: Step; whatsappLink: string }) 
           />
           <div>
             <h3 className="font-semibold">{step.title}</h3>
-            {open && (
-              <div className="mt-1 text-sm text-muted-foreground">
-                <p>{step.description} <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-4 hover:underline">Open WhatsApp</a></p>
-              </div>
-            )}
+            <div className="mt-1 text-sm text-muted-foreground">
+              <p>{step.description}</p>
+            </div>
           </div>
         </div>
       </CardContent>
@@ -63,7 +60,7 @@ const StepsSection = ({ whatsappLink }: StepsSectionProps) => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {steps.map((s) => (
-          <StepTile key={s.id} step={s} whatsappLink={whatsappLink} />
+          <StepTile key={s.id} step={s} />
         ))}
       </div>
       <div className="text-center mt-8">
