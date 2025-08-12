@@ -7,9 +7,8 @@ import FAQSection from "@/components/FAQSection";
 import SiteFooter from "@/components/SiteFooter";
 import StickyCtaBar from "@/components/StickyCtaBar";
 
-// TODO: Replace YOUR_WHATSAPP_NUMBER with your number
 const WHATSAPP_LINK =
-  "https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hi%20I%20want%20to%20browse%20kits";
+  "https://wa.me/447476031168?text=Hi%20I%20want%20to%20browse%20kits";
 
 const Index = () => {
   return (
