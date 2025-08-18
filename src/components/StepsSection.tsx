@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import openWhatsapp from "@/assets/step-open-whatsapp.png";
@@ -21,7 +20,7 @@ interface Step {
 
 const steps: Step[] = [
   { id: 1, title: "Open WhatsApp", description: "Tap to chat and browse our latest stock.", image: openWhatsapp },
-  { id: 2, title: "Browse our stock", description: "See today’s kits, sizes, and prices—updated daily.", image: browseStock },
+  { id: 2, title: "Request kits", description: "Send screenshots of kits you want and we'll have them made for you.", image: browseStock },
   { id: 3, title: "Add name & number (optional)", description: "Personalize your shirt. We confirm spelling before payment.", image: nameNumber },
   { id: 4, title: "Confirm total", description: "We send a clear all-in price including free tracked shipping.", image: confirmTotal },
   { id: 5, title: "Pay securely", description: "Apple Pay / Google Pay / Card via Ramp. We never handle card data.", image: securePay },
